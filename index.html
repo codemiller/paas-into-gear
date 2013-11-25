@@ -29,8 +29,10 @@
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
                 <style>
+                        li { font-size: 120% !important; line-height: 1.5em !important; }
                     	.initial-front { z-index: 1; }
 			.initial-back { position: absolute; z-index: 2; }
+                        #muso.visible ~ #donkey, #butt.visible ~ #muso { opacity: 0; visibility: hidden; }
 	                @-webkit-keyframes flyin { 
 			   0% { opacity: 0; top: 500px; left: -250px; z-index: 2 }
                            100% { opacity: 1; top: 195px; left: 440px; z-index: 2 } 
@@ -77,94 +79,104 @@
 			<div class="slides">
 				<section>
 					<h1>Get Your PaaS</br>Into Gear</h1>
-                                        <img src="images/paas-in-gear.png" width="400px" />
+                                        <span class="fragment initial-back" data-fragment-index="3" id="butt" style="left: 335px"><img src="images/gear-buttocks.png" width="385px"/></span>
+                                        <span class="fragment initial-back" data-fragment-index="2" id="muso" style="left: 330px"><img src="images/gear-musician.png" width="390px"/></span>
+                                        <span class="initial-front" id="donkey"><img src="images/gear-donkey.png" width="400px"/></span>
 					<h3>An Introduction To OpenShift</h3>
 					<p>Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)<br>OpenShift Developer Advocate at <a href="http://redhat.com" target="_blank">Red Hat</a></p>
 				</section>
                                 <section>
 					<h2>Agenda</h2>
-					<p></p>
+                                        <img src="images/donkey-glasses.png" style="float: left; width: 400px; padding-top: 30px; padding-left: 40px;"/>
+					<ul style="padding-top: 40px;">
+                                            <li>Intro to PaaS</li>
+                                            <li>Intro to OpenShift</li>
+                                            <li>Demo</li>
+                                            <li>Questions</li>
+                                        <ul>   
                                 </section>
                                 <section>
-					<h2>Prerequisites</h2>
-					<p></p>
+					<h2>So, What's This PaaS Thing Then?</h2>
+                                        <img src="images/donkey-race.jpg" width="450px"/>
+					<ul>
+                                            <li class="fragment">Platform as a Service, aka a Cloud Application Platform</li>
+                                            <li class="fragment">May include web servers, programming language runtimes, databases, dev tools, etc.</li>
+                                            <li class="fragment">Takes care of pretty well everything but your code</li>
+                                        <ul>   
                                 </section>
                                 <section>
-					<h2>What's a PaaS?</h2>
-					<p></p>
+					<h2>Other Cloud Bits and Bobs</h2>
+                                        <img src="images/donkey-cloud.png" width="500px"/>
+					<ul>
+                                            <li class="fragment"><strong>Infrastructure as a Service (IaaS)</strong>, such as servers, VMs, load balancers, etc.</li>
+                                            <li class="fragment"><strong>Software as a Service (SaaS)</strong>, such as web-based email clients, CRM systems, games, etc.</li>
+       
+                                        <ul>   
                                 </section>
                                 <section>
-					<h2>The cloud sandwich</h2>
-                                        <img src="images/chicken-sandwich.jpg" style="width: 470px; padding-right: 20px;"/><img src="images/cloudsandwich.png" style="width: 470px;"/>
+					<h2>Where PaaS Fits In</h2>
+                                        <img src="images/donkey-car-window.jpg" style="width: 453px; padding-right: 20px;"/><img src="images/cloudsandwich.png" style="width: 470px;"/>
                                 </section>
                                 <section>
-					<h2>How PaaS can make you happy</h2>
-					<p></p>
+					<h2>How PaaS Can Make You Happy</h2>
+					<img src="images/happy-donkey.jpg" style="float: left; width: 500px; padding-top: 30px;"/>
+					<ul style="padding-top: 40px; padding-left: 10px;">
+                                            <li class="fragment">Focus on code, not config</li>
+                                            <li class="fragment">Speed of deployment</li>
+                                            <li class="fragment">Convenience</li>
+                                            <li class="fragment">Scalablity</li>
+                                            <li class="fragment">Efficiency</li>
+                                            <li class="fragment">Polyglot capabilities</li>
+                                        <ul> 
                                 </section>
                                 <section>
-					<h2>Red Hat's PaaS</h2>
-					<p></p>
+					<h2>PaaS by Red Hat</h2>
+					<img src="images/openshift.jpg" style="width: 600px; border: 10px solid white;"/>
                                 </section>
                                 <section>
-					<h2>Three flavours</h2>
-					<p></p>
-                                </section>
-                               <section>
-					<h2>Free goodies</h2>
-					<p></p>
-                                </section>
-                               <section>
-					<h2>OpenShift Silver</h2>
-					<p></p>
+					<h2>Flavours of OpenShift</h2>
+					<img src="images/openshift-flavours.png" style="width: 1000px;"/>
                                 </section>
                                 <section>
-					<h2>Build your own PaaS</h2>
-					<p></p>
+                                        <h2><a href="https://www.openshift.com/walkthrough/how-it-works" target="_blank">How It Works</a></h2>
+                                        <img src="images/donkey-computers.jpg" style="width: 800px;"/>
                                 </section>
                                 <section>
-					<h2>How it works</h2>
-					<p></p>
+					<h2><a href="https://www.openshift.com/walkthrough/developer-workflow" target="_blank">Developer Work Flow</a></h2>
+                                        <img src="images/donkey-mates.jpg" style="width: 800px;"/>
                                 </section>
                                 <section>
-					<h2>Developer workflow</h2>
-                                        <span style="width: 200px; position: absolute; top: 500px; left: -250px;"><img src="images/appcode.png"/></span>
-                                        <span class="fragment" data-fragment-index="1" style="position: absolute; top: 350px; left: 180px;"><img src="images/openshiftrails.png"/></span>
-                                        <span class="fragment" data-fragment-index="2" style="width: 150px; position: absolute; top: 450px; left: -10px;"><img src="images/arrowupright.png"/></span>
-                                        <span class="fragment flyin-fromleft" data-fragment-index="2" style="width: 150px; position: absolute; top: 195px; left: 440px;"><img src="images/appcode.png"/></span>
-                                        <span class="fragment initial-front" data-fragment-index="3" style="width: 350px; position: absolute; top: 480px; right: -300px;"><img src="images/person-computer.png"/></span>
-                                        <span class="fragment" data-fragment-index="5" style="width: 200px; position: absolute; top: 400px; left: 723px;"><img src="images/arrowdownright.png"/></span>
-                                        <span class="fragment" data-fragment-index="4" style="width: 350px; position: absolute; position: absolute; top: 310px; left: 720px;"><img src="images/arrowupleft.png"/></span>
-                                        <span class="fragment initial-back" data-fragment-index="5" style="width: 350px; position: absolute; top: 480px; right: -300px;"><img src="images/person-computer-smiling.png"/></span>
-                                </section>
-                                <section>
-					<h2>Terminology</h2>
-					<p></p>
-                                </section>
-                                <section>
-					<h2>Languages and frameworks</h2>
-					<p></p>
-                                </section>
-                                <section>
-					<h2>Demo</h2>
-					<p></p>
+					<h2>Demo Time!</h2>
+					<img src="images/upset-donkey.jpg" width="700px"/>
                                 </section>
                                 <section>
 					<h2>Resources</h2>
-					<p></p>
+					<ul>
+                                            <li>Free Account: <a href="https://openshift.redhat.com/app/account/new?web_user[promo_code]=MelbDevMeetup" target="_blank">OpenShift Online</a></li>
+                                            <li>Docs: <a href="https://www.openshift.com/developers" target="_blank">OpenShift Developer Center</a></li>
+                                            <li>IRC: <a href="http://irc.lc/freenode/openshift" target="_blank">FreeNode #openshift</a></li>
+                                            <li>Forums: <a href="https://www.openshift.com/forums/openshift" target="_blank">http://www.openshift.com/forums/openshift</a></li>
+                                            <li>Email: <a href="mailto:openshift@redhat.com">openshift@redhat.com</a></li>
+                                            <li>Twitter: <a href="http://www.twitter.com/openshift" target="_blank">@openshift</a></li>
+					</ul>
                                 </section>
                                 <section>
-					<h2>Image credits</h2>
-                                        <ul>
-                                            <li><a href="http://www.flickr.com/photos/livingtheliminal/6837416926/" target="_blank">Beard (livingtheliminal, CC BY-NC-SA 2.0)</a></li>
+					<h2>Image Credits</h2>
+                                        <ul style="font-size: 80%; line-height: 1em;">
+                                            <li><a href="http://www.flickr.com/photos/fhmira/5307432721" target="_blank">Donkey Car Window (F H Mira, CC BY-SA 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/davesag/18735941" target="_blank">Donkey Computers (Dave Sag, CC BY-NC-SA 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/dryfish/3622133836" target="_blank">Donkey Mates (Donkey Sanctuary Press Images, CC BY-NC 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/dryfish/3622133836" target="_blank">Donkey Race (John Wright, CC BY 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/51647767@N06/6943254723" target="_blank">Donkey With Glasses (Donkey Sanctuary Press Images, CC BY-NC 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/34263657@N07/4645867558" target="_blank">Happy Donkey (Kate Roberts, CC BY-NC-SA 2.0)</a></li>
+                                            <li><a href="http://openclipart.org" target="_blank">Open Clip Art Library</a></li>
+                                            <li><a href="http://www.flickr.com/photos/joeconnolly/4707076535" target="_blank">Sleeping Donkey (TheFlyingGerbil, CC BY-NC-SA 2.0)</a></li>
+                                            <li><a href="http://www.flickr.com/photos/alces/47422069" target="_blank">Upset Donkey (Moose G, CC BY 2.0)</a></li>
                                         </ul>
-                                </section>
-                                <section>
-					<h2>Questions</h2>
-					<p></p>
                                 </section>
 				<section>
 					<h1>Get Your PaaS</br>Into Gear</h1>
-                                        <img src="images/paas-in-gear.png" width="400px" />
+                                        <img src="images/gear-donkey.png" width="350px"/>
                                         <h2><a href="http://hof.codemiller.com">http://paas.codemiller.com</a></h2>
 					<p>Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)<br>OpenShift Developer Advocate at <a href="http://redhat.com" target="_blank">Red Hat</a></p>
 				</section>
