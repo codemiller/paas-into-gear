@@ -32,7 +32,7 @@
                         li { font-size: 120% !important; line-height: 1.5em !important; }
                     	.initial-front { z-index: 1; }
 			.initial-back { position: absolute; z-index: 2; }
-                        #muso.visible ~ #donkey, #butt.visible ~ #muso { opacity: 0; visibility: hidden; }
+                        #muso.visible ~ #donkey, #butt.visible ~ #muso, #diagram2.visible ~ #diagram1 { opacity: 0; visibility: hidden; }
 	                @-webkit-keyframes flyin { 
 			   0% { opacity: 0; top: 500px; left: -250px; z-index: 2 }
                            100% { opacity: 1; top: 195px; left: 440px; z-index: 2 } 
@@ -115,7 +115,7 @@
                                 </section>
                                 <section>
 					<h2>Where PaaS Fits In</h2>
-                                        <img src="images/donkey-car-window.jpg" style="width: 453px; padding-right: 20px;"/><img src="images/cloudsandwich.png" style="width: 470px;"/>
+                                            <span class="fragment initial-back" id="diagram2" style="left: 160px;"><img src="images/paas-diagram.png" style="width: 700px; background: white;"/></span><span class="initial-front" id="diagram1"><img src="images/donkey-car-window.jpg" style="width: 453px; padding-right: 20px;"/><img src="images/cloudsandwich.png" style="width: 470px;"/></span>
                                 </section>
                                 <section>
 					<h2>How PaaS Can Make You Happy</h2>
